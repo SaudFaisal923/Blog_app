@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="">
+  {%for c in obj %}
+   <div class="">
+     <span>{{c.blog_title}}</span><br>
+     <span>{{c.blog_description}}</span><br>
+     <span>{{c.posted_date}}</span>
+   </div>
+  {%endfor%}
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'blog/blog_view.html' %}
+
+{% block comment %}
+<div class="">
+  {% for comment in obj %}
+    <div class="">
+      <span>{{comment.user}}</span>
+      <span>{{comment.Comment}}</span>
+      <div class="">{{comment.comment_date}}</div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

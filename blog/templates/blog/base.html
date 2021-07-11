@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <ul>
+    <li><a href="{% url 'create_blog' %}">Create BLog</a></li>
+    <li><a href="{% url 'myblogs' %}">My Blogs</a></li>
+  </ul>
+  <h1>Online order</h1>
+  <body>
+    {%block content%}
+    {%endblock%}
+  </body>
+</html>

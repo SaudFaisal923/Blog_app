@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="">
+  <h1>{{obj.blog_title}}</h1>
+  <h3><span>{{obj.posted_date}}</span>&nbsp&nbsp&nbsp&nbsp<span>{{obj.user.username}}</span></h3>
+  <div class="">
+    {{obj.blog_description}}[0;10]
+  </div>
+</div>
+<hr>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" name="" value="Comment">
+</form>
+<div class="">
+  {%for c in comm %}
+   <div class="">
+     <span>{{c.Comment}}</span><br>
+     <span>{{c.comment_date}}</span><br>
+     <span>{{c.user.username}}</span>
+   </div>
+  {%endfor%}
+</div>
+
+{% endblock %}

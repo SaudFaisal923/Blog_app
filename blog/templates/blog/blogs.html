@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for blog in obj %}
+<div class="">
+  <a href="blogs/{{blog.id}}/"><h1>{{blog.blog_title}}</h1></a>
+  <h3><span>{{blog.posted_date}}</span>&nbsp&nbsp&nbsp&nbsp<span>{{blog.user.username}}</span></h3>
+  <div class="">
+    {{blog.blog_description}}[0;10]
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
